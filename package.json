@@ -1,0 +1,31 @@
+{
+  "name": "@wetrustplatform/trust-fund-contracts",
+  "version": "0.0.1",
+  "description": "trust fund contracts",
+  "main": ".exported.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "solium -d contracts/ --fix",
+    "compile": "truffle compile",
+    "build": "truffle build",
+    "test": "truffle test",
+    "test:mock": "truffle test test/CompoundFinanceMock.test.js",
+    "test:dev": "truffle test test/TrustFund.test.js",
+    "beforePublish": "truffle compile && node dist.js"
+  },
+  "author": "WeTrustPlatform",
+  "license": "LGPL-3.0",
+  "devDependencies": {
+    "@types/chai": "^4.1.5",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.1.2",
+    "chai-string": "^1.5.0",
+    "ethlint": "^1.2.3"
+  },
+  "dependencies": {
+    "solc": "^0.5.2",
+    "truffle": "5.0.41"
+  }
+}
